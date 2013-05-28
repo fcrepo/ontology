@@ -68,6 +68,32 @@
     
 
 
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModified -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModified">
+        <rdfs:label xml:lang="en">was last modified on</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mixinTypes -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mixinTypes">
+        <rdfs:label xml:lang="en">has mixin type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#primaryType -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#primaryType">
+        <rdfs:label xml:lang="en">has primary type</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the name of the primary type of this resource. Normally this name can be resolved in the repository of origin into a JCR type description.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#uuid -->
 
     <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#uuid">
