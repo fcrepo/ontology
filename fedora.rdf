@@ -25,6 +25,37 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild -->
+
+    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild">
+        <rdfs:label xml:lang="en">has child</rdfs:label>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object"/>
+        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent -->
+
+    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent">
+        <rdfs:label xml:lang="en">has parent</rdfs:label>
+        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object"/>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -51,19 +82,12 @@
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild -->
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContent -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild">
-        <rdfs:label xml:lang="en">has child</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent -->
-
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent">
-        <rdfs:label xml:lang="en">has parent</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild"/>
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContent">
+        <rdfs:label xml:lang="en">has content at</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the location of content stored in this resource. This would normally be used only on a datastream.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -100,6 +124,39 @@
         <rdfs:label xml:lang="en">UUID</rdfs:label>
         <rdfs:comment xml:lang="en">An immutable identifier for this resource.</rdfs:comment>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream -->
+
+    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream">
+        <rdfs:subClassOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object -->
+
+    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object">
+        <rdfs:subClassOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource -->
+
+    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
 </rdf:RDF>
 
 
