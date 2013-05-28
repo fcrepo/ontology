@@ -43,12 +43,34 @@
     
 
 
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContentAt -->
+
+    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContentAt">
+        <rdfs:label xml:lang="en">has content at</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates a Content in which content is stored for this Datastream.</rdfs:comment>
+        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent -->
 
     <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent">
         <rdfs:label xml:lang="en">has parent</rdfs:label>
         <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object"/>
         <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#isContentOf -->
+
+    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#isContentOf">
+        <rdfs:label xml:lang="en">is content of</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates a Datastream for which this resource contains the content. </rdfs:comment>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
+        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream"/>
     </owl:ObjectProperty>
     
 
@@ -68,6 +90,7 @@
 
     <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#created">
         <rdfs:label xml:lang="en">created on</rdfs:label>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
         <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
     </owl:DatatypeProperty>
     
@@ -78,16 +101,28 @@
     <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#createdBy">
         <rdfs:label xml:lang="en">was created by</rdfs:label>
         <rdfs:comment xml:lang="en">The agent by whom this resource was created.</rdfs:comment>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContent -->
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#digest -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContent">
-        <rdfs:label xml:lang="en">has content at</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates the location of content stored in this resource. This would normally be used only on a datastream.</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#digest">
+        <rdfs:label xml:lang="en">has digest</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the fixity-related digest of this Content. [Insert note here about how to interpret the URI form.]</rdfs:comment>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
         <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasLocation">
+        <rdfs:label xml:lang="en">has location</rdfs:label>
+        <rdfs:comment xml:lang="en">A list of datastores in which this Content is persisted.</rdfs:comment>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
     </owl:DatatypeProperty>
     
 
@@ -96,7 +131,27 @@
 
     <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModified">
         <rdfs:label xml:lang="en">was last modified on</rdfs:label>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
         <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModifiedBy -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModifiedBy">
+        <rdfs:label xml:lang="en">last modified by</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the agent by whom this resource was last modified.</rdfs:comment>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mimeType -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mimeType">
+        <rdfs:label xml:lang="en">has MIME type</rdfs:label>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
     </owl:DatatypeProperty>
     
 
@@ -118,6 +173,16 @@
     
 
 
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#size -->
+
+    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#size">
+        <rdfs:label xml:lang="en">has size</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the size in bytes of this Content.</rdfs:comment>
+        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#uuid -->
 
     <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#uuid">
@@ -135,6 +200,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content -->
+
+    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content">
+        <rdfs:subClassOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    </owl:Class>
     
 
 
