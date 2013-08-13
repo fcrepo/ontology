@@ -9,14 +9,14 @@
 ]>
 
 
-<rdf:RDF xmlns="fedora#"
+<rdf:RDF 
      xml:base="fedora"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora">
-        <rdfs:label xml:lang="en">Fedora Commons Ontology</rdfs:label>
+    <owl:Ontology rdf:about="http://fcrepo.org/respository">
+        <rdfs:label xml:lang="en">Fedora Commons Repository Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">A first attempt to formalize an ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.</rdfs:comment>
     </owl:Ontology>
     
@@ -33,46 +33,83 @@
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild -->
+    <!-- http://fcrepo.org/repository#hasChild -->
 
-    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasChild">
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#hasChild">
         <rdfs:label xml:lang="en">has child</rdfs:label>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object"/>
-        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Object"/>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContentAt -->
+    <!-- http://fcrepo.org/repository#hasContentAt -->
 
-    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasContentAt">
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#hasContentAt">
         <rdfs:label xml:lang="en">has content at</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates a Content in which content is stored for this Datastream.</rdfs:comment>
-        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream"/>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Content"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Datastream"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent -->
+    <!-- http://fcrepo.org/repository#hasParent -->
 
-    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasParent">
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#hasParent">
         <rdfs:label xml:lang="en">has parent</rdfs:label>
-        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object"/>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Object"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#isContentOf -->
+    <!-- http://fcrepo.org/repository#isContentOf -->
 
-    <owl:ObjectProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#isContentOf">
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#isContentOf">
         <rdfs:label xml:lang="en">is content of</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates a Datastream for which this resource contains the content. </rdfs:comment>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
-        <rdfs:range rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Content"/>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Datastream"/>
     </owl:ObjectProperty>
     
+
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#hasResultsMember">
+        <rdfs:label xml:lang="en">has results member</rdfs:label>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Resource"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#isFixityResultOf">
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Content"/>
+        <rdfs:label xml:lang="en">is fixity result of</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#hasFixityResult">
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Content"/>
+        <rdfs:label xml:lang="en">has fixity result</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#hasVersion">
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Resource"/>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#baseVersion">
+        <rdfs:label xml:lang="en">base version</rdfs:label>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#isContentOf">
+        <rdfs:label xml:lang="en">is content of</rdfs:label>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Content"/>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Datastream"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#predecessors">
+        <rdfs:label xml:lang="en">predecessors</rdfs:label>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository#versionHistory">
+        <rdfs:label xml:lang="en">version history</rdfs:label>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
+    </owl:ObjectProperty>
+
 
 
     <!-- 
@@ -83,113 +120,172 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
+    <!-- http://fcrepo.org/repository#created -->
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#created -->
-
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#created">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#created">
         <rdfs:label xml:lang="en">created on</rdfs:label>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
         <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#createdBy -->
+    <!-- http://fcrepo.org/repository#createdBy -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#createdBy">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#createdBy">
         <rdfs:label xml:lang="en">was created by</rdfs:label>
         <rdfs:comment xml:lang="en">The agent by whom this resource was created.</rdfs:comment>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#digest -->
+    <!-- http://fcrepo.org/repository#computedChecksum -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#digest">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#computedChecksum">
         <rdfs:label xml:lang="en">has digest</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates the fixity-related digest of this Content. [Insert note here about how to interpret the URI form.]</rdfs:comment>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Content"/>
         <rdfs:range rdf:resource="&xsd;anyURI"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasLocation -->
+    <!-- http://fcrepo.org/repository#hasLocation -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#hasLocation">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#hasLocation">
         <rdfs:label xml:lang="en">has location</rdfs:label>
         <rdfs:comment xml:lang="en">A list of datastores in which this Content is persisted.</rdfs:comment>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Content"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModified -->
+    <!-- http://fcrepo.org/repository#lastModified -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModified">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#lastModified">
         <rdfs:label xml:lang="en">was last modified on</rdfs:label>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
         <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModifiedBy -->
+    <!-- http://fcrepo.org/repository#lastModifiedBy -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#lastModifiedBy">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#lastModifiedBy">
         <rdfs:label xml:lang="en">last modified by</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates the agent by whom this resource was last modified.</rdfs:comment>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mimeType -->
+    <!-- http://fcrepo.org/repository#mimeType -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mimeType">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#mimeType">
         <rdfs:label xml:lang="en">has MIME type</rdfs:label>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Content"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mixinTypes -->
+    <!-- http://fcrepo.org/repository#mixinTypes -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#mixinTypes">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#mixinTypes">
         <rdfs:label xml:lang="en">has mixin type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#primaryType -->
+    <!-- http://fcrepo.org/repository#primaryType -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#primaryType">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#primaryType">
         <rdfs:label xml:lang="en">has primary type</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates the name of the primary type of this resource. Normally this name can be resolved in the repository of origin into a JCR type description.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#size -->
+    <!-- http://fcrepo.org/repository#uuid -->
 
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#size">
-        <rdfs:label xml:lang="en">has size</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates the size in bytes of this Content.</rdfs:comment>
-        <rdfs:domain rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#uuid -->
-
-    <owl:DatatypeProperty rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#uuid">
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#uuid">
         <rdfs:label xml:lang="en">UUID</rdfs:label>
         <rdfs:comment xml:lang="en">An immutable identifier for this resource.</rdfs:comment>
     </owl:DatatypeProperty>
-    
+
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#numberOfChildren">
+        <rdfs:label xml:lang="en">number of children</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#status">
+        <rdfs:label xml:lang="en">status</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#computedSize">
+        <rdfs:label xml:lang="en">computed size</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#numFixityChecks">
+        <rdfs:label xml:lang="en">number of fixity checks</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#numFixityErrors">
+        <rdfs:label xml:lang="en">number of fixity errors</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#numFixityRepaired">
+        <rdfs:label xml:lang="en">number of fixity errors repaired</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#hasVersionLabel">
+        <rdfs:label xml:lang="en">has version label</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#hasNodeType">
+        <rdfs:label xml:lang="en">has node type</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#objectCount">
+        <rdfs:label xml:lang="en">object count</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#objectSize">
+        <rdfs:label xml:lang="en">object size</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#couldNotStoreProperty">
+        <rdfs:label xml:lang="en">could not store property</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterCacheMode">
+        <rdfs:label xml:lang="en">cluster cache mode</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterMembers">
+        <rdfs:label xml:lang="en">cluster members</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterName">
+        <rdfs:label xml:lang="en">cluster name</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterNodeAddress">
+        <rdfs:label xml:lang="en">cluster node address</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterNodeView">
+        <rdfs:label xml:lang="en">cluster node view</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterPhysicalAddress">
+        <rdfs:label xml:lang="en">cluster physical address</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#clusterSize">
+        <rdfs:label xml:lang="en">cluster size</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#isCheckedOut">
+        <rdfs:label xml:lang="en">is checked out</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fcrepo.org/repository#numberOfChildren">
+        <rdfs:label xml:lang="en">number of children</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+
 
 
     <!-- 
@@ -200,36 +296,35 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+    <!-- http://fcrepo.org/repository#Content -->
 
-
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content -->
-
-    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Content">
-        <rdfs:subClassOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    <owl:Class rdf:about="http://fcrepo.org/repository#Content">
+        <rdfs:subClassOf rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:Class>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream -->
+    <!-- http://fcrepo.org/repository#Datastream -->
 
-    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Datastream">
-        <rdfs:subClassOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    <owl:Class rdf:about="http://fcrepo.org/repository#Datastream">
+        <rdfs:subClassOf rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:Class>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object -->
+    <!-- http://fcrepo.org/repository#Object -->
 
-    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Object">
-        <rdfs:subClassOf rdf:resource="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    <owl:Class rdf:about="http://fcrepo.org/repository#Object">
+        <rdfs:subClassOf rdf:resource="http://fcrepo.org/repository#Resource"/>
     </owl:Class>
     
 
 
-    <!-- file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource -->
+    <!-- http://fcrepo.org/repository#Resource -->
 
-    <owl:Class rdf:about="file:/Users/ajs6f/Documents/fcrepo4/ontology/fedora#Resource"/>
+    <owl:Class rdf:about="http://fcrepo.org/repository#Resource"/>
+
+    <owl:Class rdf:about="http://fcrepo.org/repository#notImplemented"/>
 </rdf:RDF>
 
 
