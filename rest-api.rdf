@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="/definitions/v4/owl2html.xsl"?>
+<rdf:RDF 
+     xml:base="fedora"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://fedora.info/definitions/v4/rest-api#">
+        <rdfs:label xml:lang="en">Fedora Commons REST API Ontology</rdfs:label>
+        <rdfs:comment xml:lang="en">Describes properties used within the Fedora Commons Repository REST API.</rdfs:comment>
+    </owl:Ontology>
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rest-api#hasFixity">
+        <rdfs:label xml:lang="en">has fixity</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rest-api#hasNamespaces">
+        <rdfs:label xml:lang="en">has namespaces</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rest-api#hasWorkspaces">
+        <rdfs:label xml:lang="en">has workspaces</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rest-api#hasVersions">
+        <rdfs:label xml:lang="en">has versions</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/rest-api#digest">
+        <rdfs:label xml:lang="en">digest</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/rest-api#exportsAs">
+        <rdfs:label xml:lang="en">exports as</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/rest-api#hasMoreResults">
+        <rdfs:label xml:lang="en">has more results</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/rest-api#hasTransactionProvider">
+        <rdfs:label xml:lang="en">has transaction provider</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/rest-api#size">
+        <rdfs:label xml:lang="en">size </rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>

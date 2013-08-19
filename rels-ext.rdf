@@ -1,151 +1,146 @@
 <?xml version="1.0"?>
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
+<?xml-stylesheet type="text/xsl" href="/definitions/v4/owl2html.xsl"?>
 <rdf:RDF 
      xml:base="fedora"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://fcrepo.org/repository/relations#">
+    <owl:Ontology rdf:about="http://fedora.info/definitions/v4/rels-ext#">
         <rdfs:label xml:lang="en">Fedora Commons Relations Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">Describes relationships between Fedora Commons Repository objects.</rdfs:comment>
     </owl:Ontology>
 
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#fedoraRelationship">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#fedoraRelationship"/>
         <rdfs:comment xml:lang="en">The primitive property for all object-to-object relationships in the fedora ontology.</rdfs:comment>
         <rdfs:domain rdf:resource="http://fcrepo.org/repository#Object"/>
         <rdfs:range rdf:resource="http://fcrepo.org/repository#Object"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isPartOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isPartOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isPartOf"/>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of the generic part/whole relationship between fedora objects.  The subject is a fedora object representing a part and the predicate is a fedora object representing a whole.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasPart">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasPart">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasPart"/>
         <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of the generic part/whole relationship between fedora objects. The subject is a fedora object representing a whole and the predicate is a fedora object representing a part.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isConstituentOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isConstituentOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isConstituentOf"/>
         <rdfs:label xml:lang="en">is constituent of</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic part/whole relationship in the "made of" sense with referential integrity implications.  The subject is a fedora object representing a constituent part and the predicate is a fedora object representing a whole of which the subject is a constituent.  The constituent part cannot stand alone in any meaningful way without reference to the whole. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#isPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#isPartOf"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasConstituent">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasConstituent">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasConstituent"/>
         <rdfs:label xml:lang="en">has constituent</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic part/whole relationship in the "made of" sense with referential integrity implications. The subject is a fedora object representing a whole that is made of constituent parts and the predicate is a fedora object representing one of the constituent parts. The whole loses its integrity if the constituent part is removed. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#hasPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#hasPart"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isMemberOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isMemberOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isMemberOf"/>
         <rdfs:label xml:lang="en">is member of</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic part/whole relationship that defines a set membership relationship between fedora objects. The subject is a fedora object representing a member of a set and the predicate is a fedora object representing a whole set of which the subject is a member.  The member can be separated from the set and still stand alone as an object in its own right.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#isPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#isPartOf"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasMember">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasMember">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasMember"/>
         <rdfs:label xml:lang="en">has member</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic part/whole relationship that defines a set membership relationship between fedora objects. The subject is a fedora object representing a whole set and the predicate is a fedora object representing a member in the set.  The set does not lose its integrity if a member is removed from the set. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#hasPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#hasPart"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isSubsetOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isSubsetOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isSubsetOf"/>
         <rdfs:label xml:lang="en">is subset of</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic set membership relationship to indicate the notion of a subset. The subject is a fedora object that represents a subset and the predicate is a fedora object that represents the set of which the subject is a subset.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#isMemberOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#isMemberOf"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasSubset">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasSubset">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasSubset"/>
         <rdfs:label xml:lang="en">has subset</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic set membership to indicate the notion of a subset.  The subject is a fedora object that represents a set of objects and the predicate is a fedora object that represents a subset of the subject set.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#hasMember"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#hasMember"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isMemberOfCollection">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isMemberOfCollection">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isMemberOfCollection"/>
         <rdfs:label xml:lang="en">is member of collection</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic membership relationship to indicate the notion of a digital collection.  The subject is a fedora object representing an item in a digital collection and the predicate is a fedora object representing a whole digital collection. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#isMemberOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#isMemberOf"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasCollectionMember">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasCollectionMember">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasCollectionMember"/>
         <rdfs:label xml:lang="en">has collection member</rdfs:label>
         <rdfs:comment xml:lang="en-US">This is a refinement of the generic membership to indicate the notion of a digital collection.  The subject is a fedora object representing a whole digital collection and the predicate is a fedora object representing an item that is a member of the digital collection.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#hasMember"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#hasMember"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isDerivationOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isDerivationOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isDerivationOf"/>
         <rdfs:label xml:lang="en">is derivation of</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of a generic derivation relationship between fedora objects.  The subject is a fedora object that represents a derivation of the predicate which is another fedora object.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasDerivation">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasDerivation">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasDerivation"/>
         <rdfs:label xml:lang="en">has derivation</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of a generic derivation relationship between fedora objects.  The subject is a fedora object and the predicate is a fedora object that represents a derivation of the subject.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isDependentOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isDependentOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isDependentOf"/>
         <rdfs:label xml:lang="en">is dependent of</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of a generic dependency relationship between fedora objects.  The subject is a fedora object that represents a dependent and the predicate is another fedora object that is depended upon by the subject.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasDependent">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasDependent">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasDependent"/>
         <rdfs:label xml:lang="en">has dependent</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of a generic dependency relationship between fedora objects.  The subject is a fedora object that is depended upon and the predicate is a fedora object that represents a dependent of the subject.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isDescriptionOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isDescriptionOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isDescriptionOf"/>
         <rdfs:label xml:lang="en">is discription of</rdfs:label>
         <rdfs:comment>A generic descriptive relationship between fedora objects.  The subject is a fedora object that represents a descriptive entity and the predicate is a fedora object that is being described in some manner by the subject.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasDescription">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasDescription">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasDescription"/>
         <rdfs:label xml:lang="en">has description</rdfs:label>
         <rdfs:comment>A generic descriptive relationship between fedora objects.  The subject is a fedora object that is being described in some manner and the predicate is a fedora object that represents a descriptive entity that is about the subject. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isMetadataFor">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isMetadataFor">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isMetadataFor"/>
         <rdfs:label xml:lang="en">is metadata for</rdfs:label>
         <rdfs:comment>A refinement of the generic descriptive relationship indicating a metadata relationship between fedora objects.  The subject is a fedora object that represents metadata and the predicate is a fedora object for which the subject serves as metadata.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#isDescriptionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#isDescriptionOf"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasMetadata">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasMetadata">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasMetadata"/>
         <rdfs:label xml:lang="en">has metadata</rdfs:label>
         <rdfs:comment>A refinement of the generic descriptive relationship indicating a metadata relationship between fedora objects.  The subject is a fedora object and the predicate is a fedora object that represents metadata about the subject. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#hasDescription"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#hasDescription"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#isAnnotationOf">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isAnnotationOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isAnnotationOf"/>
         <rdfs:label xml:lang="en">is annotation of</rdfs:label>
         <rdfs:comment>A refinement of the generic descriptive relationship indicating a commentary relationship between fedora objects.  The subject is a fedora object that represents an annotation or comment and the predicate is a fedora object that is being commented upon by the subject.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#isDescriptionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#isDescriptionOf"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasAnnotation">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasAnnotation">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasAnnotation"/>
         <rdfs:label xml:lang="en">has annotation</rdfs:label>
         <rdfs:comment>A refinement of the generic descriptive relationship indicating a commentary relationship between fedora objects.  The subject is a fedora object that is being commented on and the predicate is a fedora object that represents an annotation or comment about the subject. </rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#hasDescription"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#hasDescription"/>
     </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://fcrepo.org/repository/relations#hasEquivalent">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasEquivalent">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#hasEquivalent"/>
         <rdfs:label xml:lang="en">has equivalent</rdfs:label>
         <rdfs:comment xml:lang="en-US">A definition of a generic equivalence relationship between fedora objects.  The subject is a fedora object that is equivalent to the predicate which is another fedora objects.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://fcrepo.org/repository/relations#fedoraRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
 </rdf:RDF>
