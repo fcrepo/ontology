@@ -9,13 +9,14 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#"
-     xml:base="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11"
+<rdf:RDF xmlns="http://fedora.info/definitions/v4/ldp#"
+     xml:base="http://fedora.info/definitions/v4/ldp"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11">
+    <owl:Ontology rdf:about="http://fedora.info/definitions/v4/ldp">
+        <rdfs:label xml:lang="en">Mapping from Fedora&apos;s internal ontology to the Linked Data Platform.</rdfs:label>
         <owl:imports rdf:resource="http://fedora.info/definitions/v4/repository#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ldp#"/>
     </owl:Ontology>
@@ -33,19 +34,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasContainerRepresentation -->
+    <!-- http://fedora.info/definitions/v4/ldp##hasContainerRepresentation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasContainerRepresentation">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/ldp##hasContainerRepresentation">
+        <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/ldp##hasRepresentation"/>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#AnnotatedResource"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasRepresentation"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/ldp#CompositeContainer"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasRepresentation -->
+    <!-- http://fedora.info/definitions/v4/ldp##hasRepresentation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasRepresentation">
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/ldp##hasRepresentation">
         <rdfs:label xml:lang="en">has representation</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates that the subject class is represented via HTTP as the object class.</rdfs:comment>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
@@ -76,6 +77,29 @@
     <!-- http://www.w3.org/ns/ldp#Resource -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/ldp#Resource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fedora.info/definitions/v4/ldp##hasChild -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/ldp##hasChild"/>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/repository#hasChild -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/repository#hasChild"/>
 </rdf:RDF>
 
 
