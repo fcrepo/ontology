@@ -33,12 +33,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasContainerRepresentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasContainerRepresentation">
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasRepresentation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ldp#CompositeContainer"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasRepresentation -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/1/untitled-ontology-11#hasRepresentation">
         <rdfs:label xml:lang="en">has representation</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates that the subject class is represented via HTTP as the object class.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#FedoraThing"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/ldp#Resource"/>
     </owl:ObjectProperty>
 </rdf:RDF>
