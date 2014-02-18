@@ -37,8 +37,8 @@
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#baseVersion">
         <rdfs:label xml:lang="en">base version</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Version"/>
     </owl:ObjectProperty>
     
 
@@ -46,17 +46,25 @@
     <!-- http://fedora.info/definitions/v4/repository#hasChild -->
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasChild">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">has child</rdfs:label>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#Datastream"/>
+                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#hasContentAt -->
+    <!-- http://fedora.info/definitions/v4/repository#hasContent -->
 
-    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasContentAt">
-        <rdfs:label xml:lang="en">has content at</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasContent">
+        <rdfs:label xml:lang="en">has content</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates a Content in which content is stored for this Datastream.</rdfs:comment>
         <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Content"/>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Datastream"/>
@@ -77,6 +85,7 @@
     <!-- http://fedora.info/definitions/v4/repository#hasParent -->
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasParent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en">has parent</rdfs:label>
         <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
@@ -97,7 +106,8 @@
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasVersion">
         <rdfs:label xml:lang="en">has version</rdfs:label>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Version"/>
     </owl:ObjectProperty>
     
 
@@ -105,6 +115,7 @@
     <!-- http://fedora.info/definitions/v4/repository#isContentOf -->
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#isContentOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">is content of</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates a Datastream for which this resource contains the content. </rdfs:comment>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Content"/>
@@ -127,17 +138,8 @@
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#predecessors">
         <rdfs:label xml:lang="en">predecessors</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://fedora.info/definitions/v4/repository#versionHistory -->
-
-    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#versionHistory">
-        <rdfs:label xml:lang="en">version history</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Version"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Version"/>
     </owl:ObjectProperty>
     
 
@@ -191,6 +193,14 @@
     <!-- http://fedora.info/definitions/v4/repository#Resource -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Resource"/>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/repository#Version -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Version">
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
+    </owl:Class>
 </rdf:RDF>
 
 
