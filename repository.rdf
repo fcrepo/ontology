@@ -188,20 +188,11 @@
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#FedoraThing -->
-
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#FedoraThing">
-        <rdfs:label xml:lang="en">Fedora thing</rdfs:label>
-        <rdfs:comment xml:lang="en">Something that is contemplated in the Fedora repository model.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://fedora.info/definitions/v4/repository#Fixity -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Fixity">
         <rdfs:label xml:lang="en">fixity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#FedoraThing"/>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
         <rdfs:comment xml:lang="en">A calculated or recorded result of a fixity measurement on a bitstream.</rdfs:comment>
     </owl:Class>
@@ -221,7 +212,18 @@
     <!-- http://fedora.info/definitions/v4/repository#Resource -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Resource">
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#FedoraThing"/>
+        <rdfs:label xml:lang="en">Fedora resource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
+        <rdfs:comment xml:lang="en">An entity that has been committed to the repository for safekeeping.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/repository#Thing -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Thing">
+        <rdfs:label xml:lang="en">Fedora thing</rdfs:label>
+        <rdfs:comment xml:lang="en">Something that is contemplated in the Fedora repository model.</rdfs:comment>
     </owl:Class>
     
 
