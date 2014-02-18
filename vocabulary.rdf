@@ -49,6 +49,7 @@
     <!-- http://fedora.info/definitions/v4/repository#clusterName -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#clusterName">
+        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -81,6 +82,7 @@
     <!-- http://fedora.info/definitions/v4/repository#clusterSize -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#clusterSize">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -113,6 +115,7 @@
     <!-- http://fedora.info/definitions/v4/repository#created -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#created">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -129,6 +132,7 @@
     <!-- http://fedora.info/definitions/v4/repository#hasLocation -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#hasLocation">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -145,6 +149,7 @@
     <!-- http://fedora.info/definitions/v4/repository#hasVersionLabel -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#hasVersionLabel">
+        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -153,6 +158,7 @@
     <!-- http://fedora.info/definitions/v4/repository#isCheckedOut -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#isCheckedOut">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -161,6 +167,7 @@
     <!-- http://fedora.info/definitions/v4/repository#lastModified -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#lastModified">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -177,6 +184,7 @@
     <!-- http://fedora.info/definitions/v4/repository#mimeType -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#mimeType">
+        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -193,6 +201,7 @@
     <!-- http://fedora.info/definitions/v4/repository#numFixityChecks -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#numFixityChecks">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -201,6 +210,7 @@
     <!-- http://fedora.info/definitions/v4/repository#numFixityErrors -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#numFixityErrors">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -209,6 +219,7 @@
     <!-- http://fedora.info/definitions/v4/repository#numFixityRepaired -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#numFixityRepaired">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -217,6 +228,7 @@
     <!-- http://fedora.info/definitions/v4/repository#numberOfChildren -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#numberOfChildren">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
