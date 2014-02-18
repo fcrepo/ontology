@@ -158,6 +158,7 @@
     <!-- http://fedora.info/definitions/v4/repository#Content -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Content">
+        <rdfs:label xml:lang="en">A bitstream, with no further data properties.</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Datastream"/>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
@@ -168,6 +169,7 @@
     <!-- http://fedora.info/definitions/v4/repository#Datastream -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Datastream">
+        <rdfs:label xml:lang="en">A container for a bitstream and associated properties.</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
     </owl:Class>
@@ -177,6 +179,7 @@
     <!-- http://fedora.info/definitions/v4/repository#Fixity -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Fixity">
+        <rdfs:label xml:lang="en">A calculated or recorded result of a fixity measurement on a bitstream.</rdfs:label>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:Class>
     
@@ -185,6 +188,7 @@
     <!-- http://fedora.info/definitions/v4/repository#Object -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Object">
+        <rdfs:label xml:lang="en">A Fedora object. The fundamental quantum of durable content in a Fedora repository.</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:Class>
     
@@ -199,6 +203,7 @@
     <!-- http://fedora.info/definitions/v4/repository#Version -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Version">
+        <rdfs:label xml:lang="en">A snapshot of a Fedora object at a given point in time.</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Object"/>
     </owl:Class>
 </rdf:RDF>
