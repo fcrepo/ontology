@@ -143,4 +143,12 @@
         <rdfs:comment xml:lang="en-US">A definition of a generic equivalence relationship between fedora objects.  The subject is a fedora object that is equivalent to the predicate which is another fedora objects.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship"/>
     </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#hasExternalContent">
+        <rdfs:label xml:lang="en">has external content</rdfs:label>
+        <rdfs:comment xml:lang="en-US">A fedora object linking to an external content location, which can either be in the same repository (e.g., via filesystem federation), in another fedora repository, or in another system.</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isExternalContentOf">
+        <rdfs:label xml:lang="en">is external content of</rdfs:label>
+        <rdfs:comment xml:lang="en-US">A content node linking to a fedora object.</rdfs:comment>
+    </owl:ObjectProperty>
 </rdf:RDF>
