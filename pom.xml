@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.fcrepo</groupId>
+    <artifactId>fcrepo</artifactId>
+    <version>4.0.0-beta-02-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>fcrepo-ontology</artifactId>
+  <name>${project.artifactId}</name>
+  <description>Fedora Ontology</description>
+  <packaging>pom</packaging>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>xml-maven-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>transform</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <transformationSets>
+              <transformationSet>
+                <dir>.</dir>
+                <includes>
+                  <include>rels-ext.rdf</include>
+                  <include>repository.rdf</include>
+                  <include>rest-api.rdf</include>
+                </includes>
+                <stylesheet>owl2html.xsl</stylesheet>
+                <outputDir>${project.build.directory}/html</outputDir>
+                <fileMappers>
+                  <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
+                    <pattern>\.rdf$</pattern>
+                    <replacement>/index.html</replacement>
+                  </fileMapper>
+                </fileMappers>
+              </transformationSet>
+              <transformationSet>
+                <dir>.</dir>
+                <includes>
+                  <include>index.xml</include>
+                </includes>
+                <stylesheet>owl2html.xsl</stylesheet>
+                <outputDir>${project.build.directory}/html</outputDir>
+                <fileMappers>
+                  <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                    <targetExtension>.html</targetExtension>
+                  </fileMapper>
+                </fileMappers>
+              </transformationSet>
+
+            </transformationSets>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
