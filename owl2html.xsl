@@ -7,7 +7,7 @@
   <xsl:output method="html"/>
   <xsl:variable name="title" select="/rdf:RDF/owl:Ontology/rdfs:label"/>
   <xsl:variable name="about" select="/rdf:RDF/owl:Ontology/@rdf:about"/>
-  <xsl:template match="/">
+  <xsl:template match="/rdf:RDF">
     <html>
       <head>
         <title><xsl:value-of select="$title"/></title>
@@ -152,5 +152,28 @@
         </div>
       </xsl:if>
     </div>
+  </xsl:template>
+  <xsl:template match="/index">
+    <html>
+      <head>
+        <title><xsl:value-of select="@title"/></title>
+        <style>
+          h1 { font-size: large; }
+          body { font-family: sans-serif; }
+        </style>
+      </head>
+      <body>
+        <h1><xsl:value-of select="@title"/></h1>
+        <ul>
+          <xsl:for-each select="page">
+            <xsl:variable name="page_id" select="@id"/>
+            <xsl:for-each select="document(concat($page_id,'.rdf'))">
+              <xsl:variable name="title" select="rdf:RDF/owl:Ontology/rdfs:label"/>
+              <li><a href="{$page_id}/"><xsl:value-of select="$title"/></a></li>
+            </xsl:for-each>
+          </xsl:for-each>
+        </ul>
+      </body>
+    </html>
   </xsl:template>
 </xsl:stylesheet>
