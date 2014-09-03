@@ -37,6 +37,14 @@
             </xsl:for-each>
           </xsl:if>
 
+          <xsl:if test="/rdf:RDF/owl:Individual">
+            <h3>Individuals</h3>
+            <xsl:for-each select="/rdf:RDF/owl:Individual">
+              <xsl:sort select="@rdf:about"/>
+              <xsl:call-template name="link"/>
+            </xsl:for-each>
+          </xsl:if>
+
           <xsl:if test="/rdf:RDF/owl:ObjectProperty">
             <h3>Object Properties</h3>
             <xsl:for-each select="/rdf:RDF/owl:ObjectProperty">
@@ -59,6 +67,14 @@
           <xsl:if test="/rdf:RDF/owl:Class">
             <h3>Classes</h3>
             <xsl:for-each select="/rdf:RDF/owl:Class">
+              <xsl:sort select="@rdf:about"/>
+              <xsl:call-template name="description"/>
+            </xsl:for-each>
+          </xsl:if>
+
+          <xsl:if test="/rdf:RDF/owl:Individual">
+            <h3>Individuals</h3>
+            <xsl:for-each select="/rdf:RDF/owl:Individual">
               <xsl:sort select="@rdf:about"/>
               <xsl:call-template name="description"/>
             </xsl:for-each>
@@ -131,6 +147,21 @@
         <div class="property">used with:
           <xsl:for-each select="//*[contains(rdfs:domain/@rdf:resource,$id)]|//*[contains(rdfs:range/@rdf:resource,$id)]">
             <xsl:sort select="@rdf:about"/>
+            <xsl:call-template name="link"/>
+          </xsl:for-each>
+        </div>
+      </xsl:if>
+      <xsl:if test="//*[rdf:type/@rdf:resource=concat($about,$id)]">
+        <div class="property">instances:
+          <xsl:for-each select="//*[rdf:type/@rdf:resource=concat($about,$id)]">
+            <xsl:sort select="@rdf:about"/>
+            <xsl:call-template name="link"/>
+          </xsl:for-each>
+        </div>
+      </xsl:if>
+      <xsl:if test="rdf:type">
+        <div class="property">rdf:type:
+          <xsl:for-each select="rdf:type">
             <xsl:call-template name="link"/>
           </xsl:for-each>
         </div>
