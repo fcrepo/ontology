@@ -738,6 +738,16 @@
 
 
 
+    <!-- http://fedora.info/definitions/v4/repository#configuration -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#configuration">
+        <rdfs:label xml:lang="en">Fedora transform configuration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
+        <rdfs:comment xml:lang="en">A container for transform configuration.</rdfs:comment>
+    </owl:Class>
+
+
+
     <!-- http://fedora.info/definitions/v4/repository#datastream -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#datastream">
@@ -796,6 +806,16 @@
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
         <rdfs:comment xml:lang="en">A marker of exclusive ability to modify a resource by a single user.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://fedora.info/definitions/v4/repository#nodeTypeConfiguration -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#nodeTypeConfiguration">
+        <rdfs:label xml:lang="en">Fedora transform node type configuration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
+        <rdfs:comment xml:lang="en">A container for transform node type configuration.</rdfs:comment>
     </owl:Class>
 
 
