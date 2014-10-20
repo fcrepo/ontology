@@ -29,7 +29,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
+    <!-- http://fedora.info/definitions/v4/repository#baseURL -->
+
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#baseURL">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:comment xml:lang="en">Property used by event system for the repository baseURL.</rdfs:comment>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://fedora.info/definitions/v4/repository#clusterCacheMode -->
@@ -131,6 +139,15 @@
     
 
 
+    <!-- http://fedora.info/definitions/v4/repository#eventType -->
+
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#eventType">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:comment xml:lang="en">Property used by event system for the event type.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+
     <!-- http://fedora.info/definitions/v4/repository#frozenMixinTypes -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#frozenMixinTypes">
@@ -186,6 +203,15 @@
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
+
+
+    <!-- http://fedora.info/definitions/v4/repository#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#identifier">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:comment xml:lang="en">Property used by event system for repository identifiers.</rdfs:comment>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://fedora.info/definitions/v4/repository#isCheckedOut -->
@@ -301,12 +327,30 @@
     
 
 
+    <!-- http://fedora.info/definitions/v4/repository#properties -->
+
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#properties">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:comment xml:lang="en">Property used by event system for property names.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+
+
     <!-- http://fedora.info/definitions/v4/repository#status -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#status">
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
+
+
+    <!-- http://fedora.info/definitions/v4/repository#timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#timestamp">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:comment xml:lang="en">Property used by event system for event timestamps.</rdfs:comment>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://fedora.info/definitions/v4/repository#uuid -->
