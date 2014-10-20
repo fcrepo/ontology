@@ -14,8 +14,8 @@
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#fedoraRelationship">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#fedoraRelationship"/>
         <rdfs:comment xml:lang="en">The primitive property for all object-to-object relationships in the fedora ontology.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://fcrepo.org/repository#Object"/>
-        <rdfs:range rdf:resource="http://fcrepo.org/repository#Object"/>
+        <rdfs:domain rdf:resource="http://fcrepo.org/repository#object"/>
+        <rdfs:range rdf:resource="http://fcrepo.org/repository#object"/>
     </owl:ObjectProperty>
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/rels-ext#isPartOf">
         <owl:sameAs rdf:resource="info:fedora/fedora-system:def/relations-external#isPartOf"/>
