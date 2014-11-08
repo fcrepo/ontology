@@ -17,7 +17,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://fedora.info/definitions/v4/repository#">
         <rdfs:label xml:lang="en">Fedora Commons Repository Ontology</rdfs:label>
-        <rdfs:comment xml:lang="en">A first attempt to formalize an ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -324,6 +324,13 @@
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#primaryType">
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
+  
+  
+    <!-- http://fedora.info/definitions/v4/repository#UnmappedType -->
+     
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#UnmappedType">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -484,14 +491,6 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#status -->
-
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#status">
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://fedora.info/definitions/v4/repository#timestamp -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#timestamp">
@@ -525,7 +524,7 @@
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#baseVersion">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en">base version</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
         <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Version"/>
     </owl:ObjectProperty>
     
@@ -536,12 +535,12 @@
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasChild">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">has child</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#datastream"/>
-                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#object"/>
+                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"/>
+                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#Container"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -554,8 +553,8 @@
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasContent">
         <rdfs:label xml:lang="en">has content</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates a binary in which content is stored for this datastream.</rdfs:comment>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#binary"/>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#datastream"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"/>
     </owl:ObjectProperty>
 
 
@@ -573,25 +572,8 @@
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasFixity">
         <rdfs:label xml:lang="en">has fixity</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#binary"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
         <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Fixity"/>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://fedora.info/definitions/v4/repository#hasLock -->
-
-    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasLock">
-        <rdfs:label xml:lang="en">has lock</rdfs:label>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#datastream"/>
-                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#object"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Lock"/>
     </owl:ObjectProperty>
 
 
@@ -611,8 +593,8 @@
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasParent">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en">has parent</rdfs:label>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:ObjectProperty>
     
 
@@ -621,7 +603,7 @@
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasResultsMember">
         <rdfs:label xml:lang="en">has results member</rdfs:label>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:ObjectProperty>
     
 
@@ -630,7 +612,7 @@
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasVersion">
         <rdfs:label xml:lang="en">has version</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
         <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Version"/>
     </owl:ObjectProperty>
 
@@ -651,8 +633,8 @@
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">is content of</rdfs:label>
         <rdfs:comment xml:lang="en">Indicates a datastream for which this resource contains the content. </rdfs:comment>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#binary"/>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#datastream"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"/>
     </owl:ObjectProperty>
     
 
@@ -662,27 +644,10 @@
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#isFixityOf">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">is fixity of</rdfs:label>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#binary"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Fixity"/>
     </owl:ObjectProperty>
     
-
-
-    <!-- http://fedora.info/definitions/v4/repository#locks -->
-
-    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#locks">
-        <rdfs:label xml:lang="en">locks</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Lock"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#datastream"/>
-                    <rdf:Description rdf:about="http://fedora.info/definitions/v4/repository#object"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-
 
 
     <!-- http://fedora.info/definitions/v4/repository#predecessors -->
@@ -710,27 +675,27 @@
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#AnnotatedResource">
         <rdfs:label xml:lang="en">annotated resource</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
         <rdfs:comment xml:lang="en">A Resource that maintains properties in its own right.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#binary -->
+    <!-- http://fedora.info/definitions/v4/repository#Binary -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#binary">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Binary">
         <rdfs:label xml:lang="en">binary</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
-        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#datastream"/>
-        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"/>
+        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
         <rdfs:comment xml:lang="en">A bitstream, with no further data properties.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#blanknode -->
+    <!-- http://fedora.info/definitions/v4/repository#Blanknode -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#blanknode">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Blanknode">
         <rdfs:label xml:lang="en">blank node</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">An entity that is a representation of an RDF blank node.</rdfs:comment>
@@ -748,12 +713,12 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#datastream -->
+    <!-- http://fedora.info/definitions/v4/repository#NonRdfSourceDescription -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#datastream">
-        <rdfs:label xml:lang="en">Fedora datastream</rdfs:label>
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription">
+        <rdfs:label xml:lang="en">Fedora NonRdfSourceDescription</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#AnnotatedResource"/>
-        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
+        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
         <rdfs:comment xml:lang="en">A container for a bitstream and associated properties.</rdfs:comment>
     </owl:Class>
     
@@ -783,7 +748,7 @@
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Fixity">
         <rdfs:label xml:lang="en">fixity</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
-        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
         <rdfs:comment xml:lang="en">A calculated or recorded result of a fixity measurement on a bitstream.</rdfs:comment>
     </owl:Class>
     
@@ -799,17 +764,6 @@
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#Lock -->
-
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Lock">
-        <rdfs:label xml:lang="en">lock</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
-        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
-        <rdfs:comment xml:lang="en">A marker of exclusive ability to modify a resource by a single user.</rdfs:comment>
-    </owl:Class>
-
-
-
     <!-- http://fedora.info/definitions/v4/repository#nodeTypeConfiguration -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#nodeTypeConfiguration">
@@ -820,19 +774,19 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#object -->
+    <!-- http://fedora.info/definitions/v4/repository#Container -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#object">
-        <rdfs:label xml:lang="en">Fedora object</rdfs:label>
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Container">
+        <rdfs:label xml:lang="en">Fedora Container</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#AnnotatedResource"/>
-        <rdfs:comment xml:lang="en">A Fedora object: the fundamental quantum of durable content in a Fedora repository.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Fedora Container: the fundamental quantum of durable content in a Fedora repository.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#pairtree -->
+    <!-- http://fedora.info/definitions/v4/repository#Pairtree -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#pairtree">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Pairtree">
         <rdfs:label xml:lang="en">pair tree</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">An entity that is a an intermediary node created in a PairTree hierarchy.</rdfs:comment>
@@ -849,9 +803,9 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#resource -->
+    <!-- http://fedora.info/definitions/v4/repository#Resource -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#resource">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Resource">
         <rdfs:label xml:lang="en">Fedora resource</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">An entity that has been committed to the repository for safekeeping. For example, Fedora objects and datastreams are resources. A Fixity is not, because the provenance of the instance is entirely internal to the repository.</rdfs:comment>
@@ -878,9 +832,9 @@
     
 
 
-    <!-- http://fedora.info/definitions/v4/repository#tombstone -->
+    <!-- http://fedora.info/definitions/v4/repository#Tombstone -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#tombstone">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Tombstone">
         <rdfs:label xml:lang="en">tombstone</rdfs:label>
         <rdfs:comment xml:lang="en">An entity that is a marker for a deleted node.</rdfs:comment>
     </owl:Class>
@@ -891,8 +845,80 @@
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Version">
         <rdfs:label xml:lang="en">A snapshot of a Fedora object at a given point in time.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#object"/>
+        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
     </owl:Class>
+  
+  
+  
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // REST API
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+  
+  
+  
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasAccessRoles">
+      <rdfs:label xml:lang="en">has access roles</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasFixityService">
+      <rdfs:label xml:lang="en">has fixity service</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasNamespaces">
+      <rdfs:label xml:lang="en">has namespaces</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasWorkspaces">
+      <rdfs:label xml:lang="en">has workspaces</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasVersions">
+      <rdfs:label xml:lang="en">has versions</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#sparql">
+      <rdfs:label xml:lang="en">has sparql service</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#digest">
+      <rdfs:label xml:lang="en">digest</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#exportsAs">
+      <rdfs:label xml:lang="en">exports as</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#hasMoreResults">
+      <rdfs:label xml:lang="en">has more results</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#hasTransactionProvider">
+      <rdfs:label xml:lang="en">has transaction provider</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#writable">
+      <rdfs:label xml:lang="en">writable</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+  
+   <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#status">
+     <rdfs:label xml:lang="en">status</rdfs:label>
+     <rdfs:comment xml:lang="en">Describes the status of a resource, such as active or deleted.</rdfs:comment>
+     <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+     <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
+   </owl:ObjectProperty>
+   <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#ResourceStatus">
+     <rdfs:label xml:lang="en">resource status</rdfs:label>
+     <rdfs:comment xml:lang="en">Values of the status property.  The default values are active and deleted -- but additional values can be created.</rdfs:comment>
+   </owl:Class>
+   <owl:Individual rdf:about="http://fedora.info/definitions/v4/repository#active">
+     <rdfs:label xml:lang="en">active</rdfs:label>
+     <rdfs:comment xml:lang="en">The resource is active.</rdfs:comment>
+     <rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
+   </owl:Individual>
+   <owl:Individual rdf:about="http://fedora.info/definitions/v4/repository#deleted">
+     <rdfs:label xml:lang="en">deleted</rdfs:label>
+     <rdfs:comment xml:lang="en">The resource has been marked for deletion.</rdfs:comment>
+     <rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
+   </owl:Individual>
+  
 </rdf:RDF>
 
 
