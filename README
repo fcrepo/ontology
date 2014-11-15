@@ -1,8 +1,7 @@
 v4 Ontology for Fedora Commons.
 
 http://fedora.info/definitions/v4/repository
-http://fedora.info/definitions/v4/rels-ext
-http://fedora.info/definitions/v4/rest-api
+http://fedora.info/definitions/v4/oai-pmh
 
 To generate HTML versions of the ontologies:
 
