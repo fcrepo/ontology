@@ -908,16 +908,16 @@
      <rdfs:label xml:lang="en">resource status</rdfs:label>
      <rdfs:comment xml:lang="en">Values of the status property.  The default values are active and deleted -- but additional values can be created.</rdfs:comment>
    </owl:Class>
-   <owl:Individual rdf:about="http://fedora.info/definitions/v4/repository#active">
+   <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/repository#active">
      <rdfs:label xml:lang="en">active</rdfs:label>
      <rdfs:comment xml:lang="en">The resource is active.</rdfs:comment>
      <rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
-   </owl:Individual>
-   <owl:Individual rdf:about="http://fedora.info/definitions/v4/repository#deleted">
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/repository#deleted">
      <rdfs:label xml:lang="en">deleted</rdfs:label>
      <rdfs:comment xml:lang="en">The resource has been marked for deletion.</rdfs:comment>
      <rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
-   </owl:Individual>
+   </owl:NamedIndividual>
   
 </rdf:RDF>
 

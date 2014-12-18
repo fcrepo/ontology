@@ -37,9 +37,9 @@
             </xsl:for-each>
           </xsl:if>
 
-          <xsl:if test="/rdf:RDF/owl:Individual">
-            <h3>Individuals</h3>
-            <xsl:for-each select="/rdf:RDF/owl:Individual">
+          <xsl:if test="/rdf:RDF/owl:NamedIndividual">
+            <h3>Named Individuals</h3>
+            <xsl:for-each select="/rdf:RDF/owl:NamedIndividual">
               <xsl:sort select="@rdf:about"/>
               <xsl:call-template name="link"/>
             </xsl:for-each>
@@ -72,9 +72,9 @@
             </xsl:for-each>
           </xsl:if>
 
-          <xsl:if test="/rdf:RDF/owl:Individual">
-            <h3>Individuals</h3>
-            <xsl:for-each select="/rdf:RDF/owl:Individual">
+          <xsl:if test="/rdf:RDF/owl:NamedIndividual">
+            <h3>Named Individuals</h3>
+            <xsl:for-each select="/rdf:RDF/owl:NamedIndividual">
               <xsl:sort select="@rdf:about"/>
               <xsl:call-template name="description"/>
             </xsl:for-each>
