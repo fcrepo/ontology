@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.fcrepo</groupId>
     <artifactId>fcrepo</artifactId>
-    <version>4.0.0-beta-02-SNAPSHOT</version>
+    <version>4.0.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>fcrepo-ontology</artifactId>
@@ -31,9 +31,7 @@
               <transformationSet>
                 <dir>.</dir>
                 <includes>
-                  <include>rels-ext.rdf</include>
                   <include>repository.rdf</include>
-                  <include>rest-api.rdf</include>
                 </includes>
                 <stylesheet>owl2html.xsl</stylesheet>
                 <outputDir>${project.build.directory}/html</outputDir>
@@ -47,9 +45,23 @@
               <transformationSet>
                 <dir>.</dir>
                 <includes>
+                  <include>indexing.rdf</include>
+                </includes>
+                <stylesheet>rdfs2html.xsl</stylesheet>
+                <outputDir>${project.build.directory}/html</outputDir>
+                <fileMappers>
+                  <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
+                    <pattern>\.rdf$</pattern>
+                    <replacement>/index.html</replacement>
+                  </fileMapper>
+                </fileMappers>
+              </transformationSet>
+              <transformationSet>
+                <dir>.</dir>
+                <includes>
                   <include>index.xml</include>
                 </includes>
-                <stylesheet>owl2html.xsl</stylesheet>
+                <stylesheet>index2html.xsl</stylesheet>
                 <outputDir>${project.build.directory}/html</outputDir>
                 <fileMappers>
                   <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
