@@ -163,13 +163,6 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#hasLockToken -->
-
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#hasLockToken">
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
-    </owl:DatatypeProperty>
-
-
     <!-- http://fedora.info/definitions/v4/repository#hasNodeType -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#hasNodeType">
@@ -190,16 +183,6 @@
     <!-- http://fedora.info/definitions/v4/repository#isCheckedOut -->
 
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#isCheckedOut">
-        <rdfs:range rdf:resource="&xsd;boolean"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
-    </owl:DatatypeProperty>
-
-
-
-    <!-- http://fedora.info/definitions/v4/repository#isDeep -->
-
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#isDeep">
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Lock"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
