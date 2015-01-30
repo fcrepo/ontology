@@ -290,151 +290,151 @@
 
 
 
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.custom.rep.name">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryCustomRepName">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.identifier.stability">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryIdentifierStability">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.jcr.repository.name">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryJcrRepositoryName">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.jcr.repository.vendor">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryJcrRepositoryVendor">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.jcr.repository.vendor.url">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryJcrRepositoryVendorUrl">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.jcr.repository.version">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryJcrRepositoryVersion">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.jcr.specification.name">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryJcrSpecificationName">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.jcr.specification.version">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryJcrSpecificationVersion">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.level.1.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryLevel1Supported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.level.2.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryLevel2Supported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.autocreated.definitions.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementAutocreatedDefinitionsSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.inheritance">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementInheritance">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.multiple.binary.properties.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementMultipleBinaryPropertiesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.multivalued.properties.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementMultivaluedPropertiesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.orderable.child.nodes.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementOrderableChildNodesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.overrides.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementOverridesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.primary.item.name.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementPrimaryItemNameSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.property.types">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementPropertyTypes">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.residual.definitions.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementResidualDefinitionsSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.same.name.siblings.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementSameNameSiblingsSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.update.in.use.suported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementUpdateInUseSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.node.type.management.value.constraints.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryNodeTypeManagementValueConstraintsSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.access.control.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionAccessControlSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.activities.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionActivitiesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.baselines.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionBaselinesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.journaled.observation.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionJournaledObservationSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.lifecycle.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionLifecycleSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.locking.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionLockingSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.node.and.property.with.same.name.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionNodeAndPropertyWithSameNameSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.node.type.management.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionNodeTypeManagementSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.observation.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionObservationSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.query.sql.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionQuerySqlSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.retention.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionRetentionSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.shareable.nodes.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionShareableNodesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.simple.versioning.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionSimpleVersioningSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.transactions.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionTransactionsSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.unfiled.content.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionUnfiledContentSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.update.mixin.node.types.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionUpdateMixinNodeTypesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.update.primary.node.type.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionUpdatePrimaryNodeTypeSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.versioning.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionVersioningSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.workspace.management.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionWorkspaceManagementSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.xml.export.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionXmlExportSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.option.xml.import.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryOptionXmlImportSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.query.full.text.search.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryQueryFullTextSearchSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.query.joins">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryQueryJoins">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.query.stored.queries.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryQueryStoredQueriesSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.query.xpath.doc.order">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryQueryXpathDocOrder">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.query.xpath.pos.index">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryQueryXpathPosIndex">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
-    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repository.write.supported">
+    <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#repositoryWriteSupported">
         <rdf:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
 
@@ -643,9 +643,9 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#configuration -->
+    <!-- http://fedora.info/definitions/v4/repository#Configuration -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#configuration">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Configuration">
         <rdfs:label xml:lang="en">Fedora transform configuration</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">A container for transform configuration.</rdfs:comment>
@@ -704,9 +704,9 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#nodeTypeConfiguration -->
+    <!-- http://fedora.info/definitions/v4/repository#NodeTypeConfiguration -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#nodeTypeConfiguration">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#NodeTypeConfiguration">
         <rdfs:label xml:lang="en">Fedora transform node type configuration</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">A container for transform node type configuration.</rdfs:comment>
@@ -734,9 +734,9 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#relations -->
+    <!-- http://fedora.info/definitions/v4/repository#Relations -->
 
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#relations">
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Relations">
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">An entity that may be related to other repository entities.</rdfs:comment>
     </owl:Class>
