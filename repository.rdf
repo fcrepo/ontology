@@ -508,16 +508,6 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#hasFixity -->
-
-    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasFixity">
-        <rdfs:label xml:lang="en">has fixity</rdfs:label>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Fixity"/>
-    </owl:ObjectProperty>
-
-
-
     <!-- http://fedora.info/definitions/v4/repository#hasMember -->
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasMember">
@@ -575,17 +565,6 @@
         <rdfs:comment xml:lang="en">Indicates a datastream for which this resource contains the content. </rdfs:comment>
         <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
         <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"/>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://fedora.info/definitions/v4/repository#isFixityOf -->
-
-    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#isFixityOf">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:label xml:lang="en">is fixity of</rdfs:label>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Binary"/>
-        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Fixity"/>
     </owl:ObjectProperty>
 
 
@@ -664,32 +643,12 @@
 
 
 
-    <!-- http://fedora.info/definitions/v4/repository#DublinCoreDescribable -->
-
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#DublinCoreDescribable">
-        <rdfs:label xml:lang="en">Dublin Core describable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
-        <rdfs:comment xml:lang="en">An entity that may have Dublin Core metadata assigned.</rdfs:comment>
-    </owl:Class>
-
-
-
     <!-- http://fedora.info/definitions/v4/repository#EmbedResources -->
 
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#EmbedResources">
         <rdfs:label xml:lang="en">embed resources</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
         <rdfs:comment xml:lang="en">The set of triples representing child resources of a given resource.</rdfs:comment>
-    </owl:Class>
-
-
-    <!-- http://fedora.info/definitions/v4/repository#Fixity -->
-
-    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Fixity">
-        <rdfs:label xml:lang="en">fixity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
-        <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
-        <rdfs:comment xml:lang="en">A calculated or recorded result of a fixity measurement on a bitstream.</rdfs:comment>
     </owl:Class>
 
 
