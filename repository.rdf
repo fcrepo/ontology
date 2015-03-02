@@ -18,6 +18,8 @@
     <owl:Ontology rdf:about="http://fedora.info/definitions/v4/repository#">
         <rdfs:label xml:lang="en">Fedora Commons Repository Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.</rdfs:comment>
+        <owl:versionInfo>v4/2015/02/04</owl:versionInfo>
+        <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2014/11/27/repository" />
     </owl:Ontology>
 
 

@@ -9,6 +9,8 @@
     <owl:Ontology rdf:about="http://fedora.info/definitions/v4/oai-pmh#">
         <rdfs:label xml:lang="en">Fedora Commons OAI-PMH Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">Describes relationships between Fedora Commons Repository objects used to provide an OAI-PMH service.</rdfs:comment>
+        <owl:versionInfo>v4/2015/02/04</owl:versionInfo>
+        <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2014/11/27/oai-pmh"/>
     </owl:Ontology>
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/oai-pmh#isPartOfOAISet">

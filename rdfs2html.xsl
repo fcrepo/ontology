@@ -12,6 +12,7 @@
   <xsl:variable name="modified" select="/rdf:RDF/rdf:Description[1]/dcterms:modified"/>
   <xsl:variable name="publisher" select="/rdf:RDF/rdf:Description[1]/dcterms:publisher/@rdf:resource"/>
   <xsl:variable name="seeAlso" select="/rdf:RDF/rdf:Description[1]/rdfs:seeAlso/@rdf:resource"/>
+  <xsl:variable name="versionInfo" select="/rdf:RDF/rdf:Description/owl:versionInfo"/>
 
 
   <xsl:template match="/">
@@ -28,6 +29,7 @@
           .modified { margin-left: 1em; }
           .published { margin-left: 1em; }
           .seealso { margin-left: 1em; }
+          .version { margin-left: 1em; }
         </style>
       </head>
       <body>
@@ -36,6 +38,9 @@
         <div class="comment"><xsl:value-of select="$comment"/></div>
         <div class="modified">Modified: <xsl:value-of select="$modified"/></div>
         <div class="published">Published by: <a href="{$publisher}"><xsl:value-of select="$publisher"/></a></div>
+        <xsl:if test="not($versionInfo = '')">
+          <div class="version">Version Info: <xsl:value-of select="$versionInfo" /></div>
+        </xsl:if>
         <xsl:if test="$seeAlso != ''">
           <div class="seealso">See Also: <a href="{$seeAlso}"><xsl:value-of select="$seeAlso"/></a></div>
         </xsl:if>

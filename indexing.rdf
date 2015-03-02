@@ -4,6 +4,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <rdf:Description rdf:about="http://fedora.info/definitions/v4/indexing#">
@@ -12,6 +13,7 @@
       <dcterms:publisher rdf:resource="http://fedorarepository.org/"/>
       <rdfs:seeAlso rdf:resource="https://wiki.duraspace.org/display/FEDORA4x/External+Search"/>
       <rdfs:comment xml:lang="en">Ontology for indexing configuration in Fedora repositories.</rdfs:comment>
+      <owl:versionInfo>v4/2015/02/04</owl:versionInfo>
     </rdf:Description>
 
     <rdf:Property rdf:about="http://fedora.info/definitions/v4/indexing#hasIndexingTransformation">
