@@ -799,27 +799,6 @@
       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
 
-   <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#status">
-     <rdfs:label xml:lang="en">status</rdfs:label>
-     <rdfs:comment xml:lang="en">Describes the status of a resource, such as active or deleted.</rdfs:comment>
-     <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
-     <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
-   </owl:ObjectProperty>
-   <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#ResourceStatus">
-     <rdfs:label xml:lang="en">resource status</rdfs:label>
-     <rdfs:comment xml:lang="en">Values of the status property.  The default values are active and deleted -- but additional values can be created.</rdfs:comment>
-   </owl:Class>
-   <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/repository#active">
-     <rdfs:label xml:lang="en">active</rdfs:label>
-     <rdfs:comment xml:lang="en">The resource is active.</rdfs:comment>
-     <rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
-   </owl:NamedIndividual>
-   <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/repository#deleted">
-     <rdfs:label xml:lang="en">deleted</rdfs:label>
-     <rdfs:comment xml:lang="en">The resource has been marked for deletion.</rdfs:comment>
-     <rdf:type rdf:resource="http://fedora.info/definitions/v4/repository#ResourceStatus"/>
-   </owl:NamedIndividual>
-
 </rdf:RDF>
 
 
