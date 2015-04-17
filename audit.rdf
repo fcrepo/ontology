@@ -26,18 +26,19 @@
   <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#contentModification">
     <rdfs:label xml:lang="en">content modification</rdfs:label>
     <skos:prefLabel xml:lang="en">content modification</skos:prefLabel>
-    <rdfs:comment xml:lang="en">A content file is modified.</rdfs:comment>
-    <skos:definition xml:lang="en">A content file is modified.</skos:definition>
+    <rdfs:comment xml:lang="en">A content file (bitstream) is modified.</rdfs:comment>
+    <skos:definition xml:lang="en">A content file (bitstream) is modified.</skos:definition>
     <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation/eventType"/>
     <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation"/>
+    <skos:broader rdf:resource="http://fedora.info/definitions/v4/audit#resourceModification"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:NamedIndividual>
 
   <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#contentRemoval">
     <rdfs:label xml:lang="en">content removal</rdfs:label>
     <skos:prefLabel xml:lang="en">content removal</skos:prefLabel>
-    <rdfs:comment xml:lang="en">A content file is removed from the repository.</rdfs:comment>
-    <skos:definition xml:lang="en">A content file is removed from the repository.</skos:definition>
+    <rdfs:comment xml:lang="en">A content file (bitstream) is removed.</rdfs:comment>
+    <skos:definition xml:lang="en">A content file (bitstream) is removed.</skos:definition>
     <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation/eventType"/>
     <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -51,7 +52,29 @@
         updated.</skos:definition>
     <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation/eventType"/>
     <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation"/>
+    <skos:broader rdf:resource="http://fedora.info/definitions/v4/audit#resourceModification"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#resourceModification">
+    <rdfs:label xml:lang="en">resource modification</rdfs:label>
+    <skos:prefLabel xml:lang="en">resource modification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A content file or metadata is modified.</rdfs:comment>
+    <skos:definition xml:lang="en">A content file or metadata is modified.</skos:definition>
+    <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation/eventType"/>
+    <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/preservation"/>
+    <skos:narrower rdf:resource="http://fedora.info/definitions/v4/audit#contentModification"/>
+    <skos:narrower rdf:resource="http://fedora.info/definitions/v4/audit#metadataModification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#contentModification"/>
+      <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#contentRemoval"/>
+      <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#metadataModification"/>
+      <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/audit#resourceModification"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
 
 </rdf:RDF>
