@@ -610,7 +610,7 @@
     <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#Skolem">
         <rdfs:label xml:lang="en">skolem</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Thing"/>
-        <rdfs:comment xml:lang="en">An entity that is a representation of an RDF Skolem.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An entity that is a representation of an RDF Skolem node.</rdfs:comment>
     </owl:Class>
 
 
