@@ -18,8 +18,8 @@
     <owl:Ontology rdf:about="http://fedora.info/definitions/v4/repository#">
         <rdfs:label xml:lang="en">Fedora Commons Repository Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.</rdfs:comment>
-        <owl:versionInfo>v4/2015/05/15</owl:versionInfo>
-        <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2015/02/04/repository" />
+        <owl:versionInfo>v4/2015/09/07</owl:versionInfo>
+        <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2015/05/15/repository" />
     </owl:Ontology>
 
 
@@ -740,6 +740,21 @@
         <rdfs:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
     </owl:Class>
 
+
+  <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+
+    <!-- http://fedora.info/definitions/v4/repository#inaccessibleResource -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/repository#inaccessibleResource">
+      <rdfs:label xml:lang="en">inaccessible resource</rdfs:label>
+      <rdfs:comment xml:lang="en">A Fedora resource that is inaccessible.</rdfs:comment>
+    </owl:NamedIndividual>
 
 
   <!--
