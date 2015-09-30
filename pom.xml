@@ -4,7 +4,7 @@
 
   <parent>
     <groupId>org.fcrepo</groupId>
-    <artifactId>fcrepo</artifactId>
+    <artifactId>fcrepo-parent</artifactId>
     <version>4.3.1-SNAPSHOT</version>
   </parent>
 
@@ -12,6 +12,11 @@
   <name>${project.artifactId}</name>
   <description>Fedora Ontology</description>
   <packaging>pom</packaging>
+
+  <properties>
+    <project_name>ontology</project_name>
+    <project_organization>fcrepo4</project_organization>
+  </properties>
 
   <build>
     <pluginManagement>
@@ -45,20 +50,6 @@
               <transformationSet>
                 <dir>.</dir>
                 <includes>
-                  <include>indexing.rdf</include>
-                </includes>
-                <stylesheet>rdfs2html.xsl</stylesheet>
-                <outputDir>${project.build.directory}/html</outputDir>
-                <fileMappers>
-                  <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
-                    <pattern>\.rdf$</pattern>
-                    <replacement>/index.html</replacement>
-                  </fileMapper>
-                </fileMappers>
-              </transformationSet>
-              <transformationSet>
-                <dir>.</dir>
-                <includes>
                   <include>index.xml</include>
                 </includes>
                 <stylesheet>index2html.xsl</stylesheet>
@@ -76,7 +67,7 @@
       </plugins>
     </pluginManagement>
   </build>
-  
+
   <repositories>
     <repository>
       <id>snapshots-repo</id>
