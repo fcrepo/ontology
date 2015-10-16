@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.fcrepo</groupId>
     <artifactId>fcrepo-parent</artifactId>
-    <version>4.3.1-SNAPSHOT</version>
+    <version>4.4.0</version>
   </parent>
 
   <artifactId>fcrepo-ontology</artifactId>
@@ -80,4 +80,8 @@
       </snapshots>
     </repository>
   </repositories>
+
+  <scm>
+    <tag>fcrepo-ontology-4.4.0</tag>
+  </scm>
 </project>
