@@ -1,3 +1,12 @@
-<index title="Fedora Ontologies">
-  <page id="repository"/>
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="index2html.xsl"?>
+
+<index>
+  <pages title="Fedora Ontologies">
+    <page id="Fedora Commons Repository Ontology" url="definitions/v4/repository"/>
+  </pages>
+  <items>
+    <item id="Fedora Home" url="http://fedorarepository.org"/>
+    <item id="Fedora Wiki" url="https://wiki.duraspace.org/display/FF"/>
+  </items>
 </index>

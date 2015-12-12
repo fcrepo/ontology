@@ -9,31 +9,33 @@
   <xsl:template match="/index">
     <html>
       <head>
-        <title><xsl:value-of select="@title"/></title>
+        <title><xsl:value-of select="pages/@title"/></title>
         <style>
+          body { width: 80%; margin: 0 auto; }
+          body { font-family: sans-serif; background: url(assets/cream_pixels.png);}
+          header { text-align: center; }
           h1 { font-size: large; }
-          body { font-family: sans-serif; }
         </style>
       </head>
       <body>
-        <h1><xsl:value-of select="@title"/></h1>
+        <header>
+          <img src="assets/fedora_logo.png"/>
+        </header>
+        <h1><xsl:value-of select="pages/@title"/></h1>
         <ul>
-          <xsl:for-each select="page">
-            <xsl:variable name="page_id" select="@id"/>
-            <xsl:for-each select="document(concat($page_id,'.rdf'))">
-              <xsl:choose>
-                <xsl:when test="rdf:RDF/owl:Ontology/rdfs:label">
-                  <li>
-                    <a href="{$page_id}/"><xsl:value-of select="rdf:RDF/owl:Ontology/rdfs:label"/></a>
-                  </li>
-                </xsl:when>
-                <xsl:when test="rdf:RDF/rdf:Description[1]/dcterms:title">
-                    <a href="{$page_id}/"><xsl:value-of select="rdf:RDF/rdf:Description[1]/dcterms:title"/></a>
-                </xsl:when>
-              </xsl:choose>
-            </xsl:for-each>
+          <xsl:for-each select="pages/page">
+            <li>
+              <xsl:variable name="page_url" select="@url"/>
+              <a href="{$page_url}"><xsl:value-of select="@id"/></a>
+            </li>
           </xsl:for-each>
         </ul>
+
+        <xsl:for-each select="items/item">
+          <xsl:variable name="item_url" select="@url"/>
+          <h1><a href="{$item_url}"><xsl:value-of select="@id"/></a></h1>
+        </xsl:for-each>
+
       </body>
     </html>
   </xsl:template>
