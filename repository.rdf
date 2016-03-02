@@ -18,7 +18,7 @@
     <owl:Ontology rdf:about="http://fedora.info/definitions/v4/repository#">
         <rdfs:label xml:lang="en">Fedora Commons Repository Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.</rdfs:comment>
-        <owl:versionInfo>v4/2015/11/05</owl:versionInfo>
+        <owl:versionInfo>v4/2016/03/01</owl:versionInfo>
         <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2015/09/07/repository" />
     </owl:Ontology>
 
@@ -393,6 +393,16 @@
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"/>
         <owl:disjointWith rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
         <rdfs:comment xml:lang="en">A bitstream, with no further data properties.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://fedora.info/definitions/v4/repository#RepositoryRoot -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/repository#RepositoryRoot">
+        <rdfs:label xml:lang="en">repository root</rdfs:label>
+        <owl:subClassOf rdf:resource="http://fedora.info/definitions/v4/repository#Container"/>
+        <rdfs:comment xml:lang="en">A repository root.</rdfs:comment>
     </owl:Class>
 
 
