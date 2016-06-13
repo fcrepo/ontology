@@ -601,6 +601,7 @@
     </owl:DatatypeProperty>
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/repository#writable">
       <rdfs:label xml:lang="en">writable</rdfs:label>
+      <rdfs:comment>Whether or not the resource with this representation could have been altered by the same agent that received this representation if the request that retrieved this representation had been a mutating request.</rdfs:comment>
       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
 
