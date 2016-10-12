@@ -363,6 +363,15 @@
     </owl:ObjectProperty>
 
 
+    <!-- http://fedora.info/definitions/v4/repository#hasTombstone -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/repository#hasTombstone">
+        <rdfs:label xml:lang="en">hasTombstone</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates a tombstone resource, marking a deleted fedora:Resource</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+
 
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
