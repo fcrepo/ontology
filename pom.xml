@@ -15,7 +15,7 @@
 
   <properties>
     <project_name>ontology</project_name>
-    <project_organization>fcrepo4</project_organization>
+    <project_organization>fcrepo</project_organization>
   </properties>
 
   <build>
